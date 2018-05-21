@@ -27,6 +27,10 @@ _base16()
       [ -f "$hook" ] && [ -x "$hook" ] && "$hook"
     done
   fi
+  if [ -f ~/.config/base16-i3/colors/base16-$theme.config ]; then
+    cat ~/.config/base16-i3/colors/base16-$theme.config ~/.config/i3/config.base > ~/.config/i3/config
+    i3-msg restart
+  fi
 }
 FUNC
 for script in $script_dir/scripts/base16*.sh; do
