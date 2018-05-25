@@ -28,7 +28,7 @@ _base16()
     done
   fi
   if [ -f ~/.config/base16-i3/colors/base16-$theme.config ]; then
-    cat ~/.config/base16-i3/colors/base16-$theme.config ~/.config/i3/config.base > ~/.config/i3/config
+    cat ~/.config/base16-i3/colors/base16-$theme.config ~/.config/i3/config.host ~/.config/i3/config.base > ~/.config/i3/config
     i3-msg restart
   fi
 }
